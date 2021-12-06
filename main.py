@@ -3,7 +3,7 @@ from solutions.aoc_2 import submarine, submarine_with_aim
 from solutions.aoc_3 import calc_power_rate, search
 from solutions.aoc_4 import bingo_1, bingo_2
 from solutions.aoc_5 import vents_1, vents_2
-from solutions.aoc_6 import star_1, star_2
+from solutions.aoc_6 import lanternfish
 
 
 def read_in(filename):
@@ -31,5 +31,5 @@ print('Problem 5 A: ' + str(vents_1(input_)))
 print('Problem 5 B: ' + str(vents_2(input_)))
 
 input_ = list(read_in('inputs/6.txt'))
-print('Problem 6 A: ' + str(star_1(input_)))
-print('Problem 6 B: ' + str(star_2(input_)))
+print('Problem 6 A: ' + str(lanternfish(input_, 80)))
+print('Problem 6 B: ' + str(lanternfish(input_, 256)))
