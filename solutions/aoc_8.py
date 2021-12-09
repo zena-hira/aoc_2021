@@ -1,7 +1,7 @@
 import itertools
 from collections import defaultdict, Counter
 
-def star_1(l):
+def segment_1(l):
     info = parse(l)
     counts = defaultdict(int)
 
@@ -37,7 +37,7 @@ shapes = {
 }
 
 # i am sure there are easier ways to do this part
-def star_2(l):
+def segment_2(l):
     info = parse(l)
 
     running_sum = 0
