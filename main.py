@@ -1,4 +1,5 @@
 from solutions.aoc_1 import increase, window_function
+from solutions.aoc_10 import syntax_1, syntax_2
 from solutions.aoc_2 import submarine, submarine_with_aim
 from solutions.aoc_3 import calc_power_rate, search
 from solutions.aoc_4 import bingo_1, bingo_2
@@ -59,3 +60,10 @@ print('Problem 9 A Sample: ' + str(basins_1(sample)))
 print('Problem 9 A: ' + str(basins_1(input_)))
 print('Problem 9 B Sample: ' + str(basins_2(sample)))
 print('Problem 9 B: ' + str(basins_2(input_)))
+
+input_ = list(read_in('inputs/10.txt'))
+sample = list(read_in('inputs/sample_10.txt'))
+print('Problem 10 A Sample: ' + str(syntax_1(sample)))
+print('Problem 10 A: ' + str(syntax_1(input_)))
+print('Problem 10 B Sample: ' + str(syntax_2(sample)))
+print('Problem 10 B: ' + str(syntax_2(input_)))
