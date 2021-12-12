@@ -1,6 +1,7 @@
 from solutions.aoc_1 import increase, window_function
 from solutions.aoc_10 import syntax_1, syntax_2
 from solutions.aoc_11 import Octopus_1, Octopus_2
+from solutions.aoc_12 import star_1, star_2
 from solutions.aoc_2 import submarine, submarine_with_aim
 from solutions.aoc_3 import calc_power_rate, search
 from solutions.aoc_4 import bingo_1, bingo_2
@@ -69,9 +70,16 @@ def read_in(filename):
 # print('Problem 10 B Sample: ' + str(syntax_2(sample)))
 # print('Problem 10 B: ' + str(syntax_2(input_)))
 
-input_ = list(read_in('inputs/11.txt'))
-sample = list(read_in('inputs/sample_11.txt'))
-print('Problem 11 A Sample: ' + str(Octopus_1(sample)))
-print('Problem 11 A: ' + str(Octopus_1(input_)))
-print('Problem 11 B Sample: ' + str(Octopus_2(sample)))
-print('Problem 11 B: ' + str(Octopus_2(input_)))
+# input_ = list(read_in('inputs/11.txt'))
+# sample = list(read_in('inputs/sample_11.txt'))
+# print('Problem 11 A Sample: ' + str(Octopus_1(sample)))
+# print('Problem 11 A: ' + str(Octopus_1(input_)))
+# print('Problem 11 B Sample: ' + str(Octopus_2(sample)))
+# print('Problem 11 B: ' + str(Octopus_2(input_)))
+
+input_ = list(read_in('inputs/12.txt'))
+sample = list(read_in('inputs/sample_12.txt'))
+print('Problem 12 A Sample: ' + str(star_1(sample)))
+print('Problem 12 A: ' + str(star_1(input_)))
+print('Problem 12 B Sample: ' + str(star_2(sample)))
+print('Problem 12 B: ' + str(star_2(input_)))
