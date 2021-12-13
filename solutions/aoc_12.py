@@ -1,7 +1,7 @@
 from collections import defaultdict
 
 
-def star_1(l):
+def paths_1(l):
     graph = parse(l)
     q = [('start', set([]))] # next node, small caves seen so far
 
@@ -36,7 +36,7 @@ def parse(l):
         edges[post].add(pre)
     return edges
 
-def star_2(l):
+def paths_2(l):
     graph = parse(l)
 
     used_paths = set([])
