@@ -13,33 +13,29 @@ def neighbours(p, grid):
 
 
 def search2(grid):
-    limiter = {}
+    limiter = set()
 
     endVal = len(grid) - 1
 
     stack = []
     # pick position with least cost
-    heapq.heappush(stack, (0, (0,0), set()))
+    heapq.heappush(stack, (0, (0,0)))
 
     while len(stack) > 0:
-        (cost, position, visited) = heapq.heappop(stack)
+        (cost, position) = heapq.heappop(stack)
         # if we have been here before with less cost -> stop
         if position in limiter:
-            if limiter[position] <= cost:
-                continue
-        limiter[position] = cost
-
+            continue
+        limiter.add(position)
 
         if position == (endVal, endVal):
             return cost
 
 
         for (nx, ny) in neighbours(position, grid):
-            if (nx, ny) in visited:
+            if (nx, ny) in limiter:
                 continue
-            v2 = set(visited)
-            v2.add((nx, ny))
-            heapq.heappush(stack, (cost + grid[nx][ny], (nx,ny), v2))
+            heapq.heappush(stack, (cost + grid[nx][ny], (nx,ny)))
 
 
 def parse(l):
