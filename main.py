@@ -4,7 +4,7 @@ from solutions.aoc_11 import Octopus_1, Octopus_2
 from solutions.aoc_12 import paths_1, paths_2
 from solutions.aoc_13 import origami_1, origami_2
 from solutions.aoc_14 import polymerization_1, polymerization_2
-from solutions.aoc_15 import\ chiton_1, chiton_2
+from solutions.aoc_15 import chiton_1, chiton_2
 from solutions.aoc_2 import submarine, submarine_with_aim
 from solutions.aoc_3 import calc_power_rate, search
 from solutions.aoc_4 import bingo_1, bingo_2
