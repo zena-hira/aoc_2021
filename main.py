@@ -4,6 +4,7 @@ from solutions.aoc_11 import Octopus_1, Octopus_2
 from solutions.aoc_12 import paths_1, paths_2
 from solutions.aoc_13 import origami_1, origami_2
 from solutions.aoc_14 import polymerization_1, polymerization_2
+from solutions.aoc_15 import\ chiton_1, chiton_2
 from solutions.aoc_2 import submarine, submarine_with_aim
 from solutions.aoc_3 import calc_power_rate, search
 from solutions.aoc_4 import bingo_1, bingo_2
@@ -94,9 +95,16 @@ def read_in(filename):
 # print('Problem 13 B Sample: ' + str(origami_2(sample)))
 # print('Problem 13 B: ' + str(origami_2(input_)))
 
-input_ = list(read_in('inputs/14.txt'))
-sample = list(read_in('inputs/sample_14.txt'))
-print('Problem 14 A Sample: ' + str(polymerization_1(sample)))
-print('Problem 14 A: ' + str(polymerization_1(input_)))
-print('Problem 14 B Sample: ' + str(polymerization_2(sample)))
-print('Problem 14 B: ' + str(polymerization_2(input_)))
+# input_ = list(read_in('inputs/14.txt'))
+# sample = list(read_in('inputs/sample_14.txt'))
+# print('Problem 14 A Sample: ' + str(polymerization_1(sample)))
+# print('Problem 14 A: ' + str(polymerization_1(input_)))
+# print('Problem 14 B Sample: ' + str(polymerization_2(sample)))
+# print('Problem 14 B: ' + str(polymerization_2(input_)))
+
+input_ = list(read_in('inputs/15.txt'))
+sample = list(read_in('inputs/sample_15.txt'))
+print('Problem 15 A Sample: ' + str(chiton_1(sample)))
+print('Problem 15 A: ' + str(chiton_1(input_)))
+print('Problem 15 B Sample: ' + str(chiton_2(sample)))
+print('Problem 15 B: ' + str(chiton_2(input_)))
