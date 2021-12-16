@@ -31,7 +31,6 @@ def search2(grid):
         if position == (endVal, endVal):
             return cost
 
-
         for (nx, ny) in neighbours(position, grid):
             if (nx, ny) in limiter:
                 continue
