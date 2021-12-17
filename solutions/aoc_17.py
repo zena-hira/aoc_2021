@@ -1,7 +1,7 @@
 import math
 import re
 
-def star_1(l):
+def shot_1(l):
     target = parse(l)
     #print(target)
     maxy = 0
@@ -39,7 +39,7 @@ def step(p, v):
     dvx = 0 if vx == 0 else -int(math.copysign(1, vx))
     return (x+vx, y+vy), (vx + dvx, vy - 1)
 
-def star_2(l):
+def shot_2(l):
     target = parse(l)
     xlo, xhi, ylo, yhi = target
     c = 0
