@@ -7,6 +7,7 @@ from solutions.aoc_14 import polymerization_1, polymerization_2
 from solutions.aoc_15 import chiton_1, chiton_2
 from solutions.aoc_16 import decoder_2, decoder_1
 from solutions.aoc_17 import shot_1, shot_2
+from solutions.aoc_18 import star_1, star_2, snailfish_2, snailfish_1
 from solutions.aoc_2 import submarine, submarine_with_aim
 from solutions.aoc_3 import calc_power_rate, search
 from solutions.aoc_4 import bingo_1, bingo_2
@@ -118,9 +119,23 @@ def read_in(filename):
 # print('Problem 16 B Sample: ' + str(decoder_2(sample)))
 # print('Problem 16 B: ' + str(decoder_2(input_)))
 
-input_ = list(read_in('inputs/17.txt'))
-sample = list(read_in('inputs/sample_17.txt'))
-print('Problem 17 A Sample: ' + str(shot_1(sample)))
-print('Problem 17 A: ' + str(shot_1(input_)))
-print('Problem 17 B Sample: ' + str(shot_2(sample)))
-print('Problem 17 B: ' + str(shot_2(input_)))
+# input_ = list(read_in('inputs/17.txt'))
+# sample = list(read_in('inputs/sample_17.txt'))
+# print('Problem 17 A Sample: ' + str(shot_1(sample)))
+# print('Problem 17 A: ' + str(shot_1(input_)))
+# print('Problem 17 B Sample: ' + str(shot_2(sample)))
+# print('Problem 17 B: ' + str(shot_2(input_)))
+
+sample = list(read_in('inputs/sample_18.txt'))
+input_ = list(read_in('inputs/18.txt'))
+print('Problem 18 A Sample: ' + str(snailfish_1(sample)))
+print('Problem 18 A: ' + str(snailfish_1(input_)))
+print('Problem 18 B Sample: ' + str(snailfish_2(sample)))
+print('Problem 18 B: ' + str(snailfish_2(input_)))
+
+input_ = list(read_in('inputs/18.txt'))
+sample = list(read_in('inputs/sample_18.txt'))
+print('Problem 18 A Sample: ' + str(star_1(sample)))
+print('Problem 18 A: ' + str(star_1(input_)))
+print('Problem 18 B Sample: ' + str(star_2(sample)))
+print('Problem 18 B: ' + str(star_2(input_)))
