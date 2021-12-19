@@ -134,7 +134,7 @@ class Node(object):
             else:
                 return self.value
 
-def star_1(l):
+def snailfish_solution_2_1(l):
     x = []
 
     for line in l:
@@ -249,7 +249,7 @@ def combine_trees(t1, t2):
         b = traverse_split(tree)
     return tree
 
-def star_2(l):
+def snailfish_solution_2_2(l):
     x = []
 
     for line in l:
