@@ -12,7 +12,7 @@ class Scanner(object):
         self.per_beacon = per_beacon
         self.beacons_as_set = frozenset(beacons)
 
-def star_1(l):
+def scanner_1(l):
     scanners = { id: Scanner(id, beacons) for (id, beacons) in parse(l).items() }
     mappings = {}
 
@@ -32,14 +32,28 @@ def star_1(l):
         transes = path_to_zero(i, mappings)
         is_remapped = []
         remapped_beacons_per_scanner[i] = is_remapped
-        for b in scanners[i].beacons:
+        for b in [(0,0,0)] + scanners[i].beacons:
             for ori,dist in transes:
                 b = apply_orientation_dist(b, ori, dist)
             all_beacons.add(b)
             is_remapped.append(b)
 
-
+    plot_points(all_beacons, remapped_beacons_per_scanner)
     return len(all_beacons)
+
+
+def plot_points(l, b):
+    import matplotlib.pyplot as plt
+
+    fig = plt.figure()
+    ax = fig.add_subplot(projection='3d')
+    for x,y,z in l:
+        ax.scatter(x, y, z, marker='o', c = 'orange')
+
+    for k, v in b.items():
+        ax.scatter(v[0][0], v[0][1], v[0][2], marker='o', c='black')
+
+    plt.show()
 
 def path_to_zero(s, mappings):
     to_try = [(s, [])]
@@ -69,6 +83,7 @@ def align(scanner1, scanner2):
     attempted = set()
 
     for pd in possible_dists:
+        # distance to list of point pairs (idx)
         for (p1i, p2i) in scanner1.per_beacon[pd]:
             p1 = scanner1.beacons[p1i]
             p2 = scanner1.beacons[p2i]
@@ -89,7 +104,7 @@ def find_12(possible, scanner1, scanner2):
     s2bs = set(apply_orientation_dist(p, ori, dis) for p in scanner2.beacons)
     return len(scanner1.beacons_as_set.intersection(s2bs)) >= 12
 
-# applies all orientations and checks if the distances are still the same
+# applies all orientations and checks if the translation (mapping to the other scanner's system) and orientation works
 def match2(p1, p2, q1, q2):
     for orientation in all_orientation_modifiers():
         q1r = remap(q1, orientation)
@@ -97,6 +112,7 @@ def match2(p1, p2, q1, q2):
 
         q2r = apply_orientation_dist(q2, orientation, dist)
         if q2r == p2:
+            # if after applying the transformations to q2 it is the same point return the translation and the orientation
             yield orientation, dist
 
 def apply_orientation_dist(p, orientation, dist):
@@ -106,10 +122,11 @@ def apply_orientation_dist(p, orientation, dist):
 
 def identity():
     return (1,2,3), (0,0,0)
-
+# applies orientation
 def remap(p, orientation):
     return tuple(int(copysign(1,i)) * p[abs(i)-1] for i in orientation)
 
+#translation
 def calc_dist_array(p1, p2):
     x1,y1,z1 = p1
     x2,y2,z2 = p2
@@ -154,7 +171,7 @@ def parse(l):
     return scanners
 
 
-def star_2(l):
+def scanner_2(l):
     x = sorted(list(all_orientation_modifiers()))
     scanners = {id: Scanner(id, beacons) for (id, beacons) in parse(l).items()}
     mappings = {}
