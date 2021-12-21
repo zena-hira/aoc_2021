@@ -1,4 +1,4 @@
-def star_1(l):
+def trench_1(l):
     translation, sparse, translation_neg = parse(l)
     if translation[0]:
         next_points = next_sparse(translation_neg, sparse)
@@ -46,7 +46,7 @@ def next_sparse(translation, sparse, invert = False):
 
 
 
-def star_2(l):
+def trench_2(l):
     translation, sparse, translation_neg = parse(l)
     next_points = sparse
     for _ in range(0, 25):
