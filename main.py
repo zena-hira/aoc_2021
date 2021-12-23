@@ -13,6 +13,7 @@ from solutions.aoc_2 import submarine, submarine_with_aim
 from solutions.aoc_20 import trench_2, trench_1
 from solutions.aoc_21 import dirac_2, dirac_1
 from solutions.aoc_22 import reactor_1, reactor_2
+from solutions.aoc_23 import amphipod_1, amphipod_2
 from solutions.aoc_3 import calc_power_rate, search
 from solutions.aoc_4 import bingo_1, bingo_2
 from solutions.aoc_5 import vents_1, vents_2
@@ -165,9 +166,16 @@ def read_in(filename):
 # print('Problem 21 B Sample: ' + str(dirac_2(sample)))
 # print('Problem 21 B: ' + str(dirac_2(input_)))
 
-input_ = list(read_in('inputs/22.txt'))
-sample = list(read_in('inputs/sample_22.txt'))
-print('Problem 22 A Sample: ' + str(reactor_1(sample)))
-print('Problem 22 A: ' + str(reactor_1(input_)))
-print('Problem 22 B Sample: ' + str(reactor_2(sample)))
-print('Problem 22 B: ' + str(reactor_2(input_)))
+# input_ = list(read_in('inputs/22.txt'))
+# sample = list(read_in('inputs/sample_22.txt'))
+# print('Problem 22 A Sample: ' + str(reactor_1(sample)))
+# print('Problem 22 A: ' + str(reactor_1(input_)))
+# print('Problem 22 B Sample: ' + str(reactor_2(sample)))
+# print('Problem 22 B: ' + str(reactor_2(input_)))
+
+input_ = list(read_in('inputs/23.txt'))
+sample = list(read_in('inputs/sample_23.txt'))
+print('Problem 23 A Sample: ' + str(amphipod_1(sample)))
+print('Problem 23 A: ' + str(amphipod_1(input_)))
+print('Problem 23 B Sample: ' + str(amphipod_2(sample)))
+print('Problem 23 B: ' + str(amphipod_2(input_)))
