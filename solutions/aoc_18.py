@@ -1,7 +1,6 @@
 import ast
 import copy
 import itertools
-import re
 
 
 def snailfish_1(l):
@@ -152,7 +151,6 @@ def snailfish_solution_2_1(l):
             b = traverse_split(tree)
         current = tree
 
-    print(str(current.to_list()))
     return current.magnitude()
 
 def add_left_sibling(p, value):

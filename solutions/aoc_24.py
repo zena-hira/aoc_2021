@@ -61,9 +61,12 @@ def search(mini=False):
                 if (i+1, z, j) not in seen:
                     q.append((z, i+1, j, used+[w]))
 
-def alu_1(l):
-    commands = parse(l)
-    print(run(commands, (int(x) for x in '91191516111324')))
+def alu_1():
+    # commands = parse(l)
+
+    # print(run(commands, (int(x) for x in '98491959997994')))
+    #
+    # print(run(commands, (int(x) for x in '61191516111321')))
 
     return(search(mini=False))
 
@@ -81,6 +84,12 @@ def parse(l):
                 arg2 = int(arg2)
             commands.append([op, arg1, arg2])
     return commands
+
+def charsIn(i):
+    if i == 0:
+        return ''
+    else:
+        return charsIn(i//26) + chr(65 + (i % 26))
 
 def run(commands, input):
     memory = {'w': 0, 'x': 0, 'y': 0, 'z': 0}
@@ -104,5 +113,5 @@ def run(commands, input):
             memory[a1] = ops[op](v1, v2)
     return memory
 
-def alu_2(l):
+def alu_2():
     return(search(mini=True))

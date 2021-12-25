@@ -38,7 +38,7 @@ def scanner_1(l):
             all_beacons.add(b)
             is_remapped.append(b)
 
-    plot_points(all_beacons, remapped_beacons_per_scanner)
+    # plot_points(all_beacons, remapped_beacons_per_scanner)
     return len(all_beacons)
 
 
